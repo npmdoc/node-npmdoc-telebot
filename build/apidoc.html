@@ -1,0 +1,974 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/kosmodrey/telebot"
+
+    >telebot (v1.0.7)</a>
+</h1>
+<h4>Easy way to write Telegram bots.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telebot">module telebot</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.telebot">
+            function <span class="apidocSignatureSpan"></span>telebot
+            <span class="apidocSignatureSpan">(cfg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.</span>methods</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.</span>updates</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telebot.methods">module telebot.methods</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.answerList">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>answerList
+            <span class="apidocSignatureSpan">(id, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.button">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>button
+            <span class="apidocSignatureSpan">(type, text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.inlineButton">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>inlineButton
+            <span class="apidocSignatureSpan">(text, opt={})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.inlineKeyboard">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>inlineKeyboard
+            <span class="apidocSignatureSpan">(inline_keyboard)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.inlineQueryKeyboard">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>inlineQueryKeyboard
+            <span class="apidocSignatureSpan">(inline_keyboard)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.keyboard">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>keyboard
+            <span class="apidocSignatureSpan">(keyboard, opt={})</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.sendAudio">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>sendAudio
+            <span class="apidocSignatureSpan">(id, audio, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.sendDocument">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>sendDocument
+            <span class="apidocSignatureSpan">(id, doc, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.sendPhoto">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>sendPhoto
+            <span class="apidocSignatureSpan">(id, photo, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.sendSticker">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>sendSticker
+            <span class="apidocSignatureSpan">(id, sticker, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.sendVideo">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>sendVideo
+            <span class="apidocSignatureSpan">(id, video, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.sendVoice">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>sendVoice
+            <span class="apidocSignatureSpan">(id, voice, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.methods.setWebhook">
+            function <span class="apidocSignatureSpan">telebot.methods.</span>setWebhook
+            <span class="apidocSignatureSpan">(url, certificate)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>answerCallbackQuery</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>answerInlineQuery</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>editMessageCaption</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>editMessageReplyMarkup</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>editMessageText</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>forwardMessage</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>getChat</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>getChatAdministrators</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>getChatMember</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>getChatMembersCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>getFile</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>getMe</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>getUserProfilePhotos</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>getWebhookInfo</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>kickChatMember</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>leaveChat</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>sendChatAction</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>sendContact</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>sendLocation</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>sendMessage</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>sendVenue</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">telebot.methods.</span>unbanChatMember</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.telebot.updates">module telebot.updates</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.updates.callback_query">
+            function <span class="apidocSignatureSpan">telebot.updates.</span>callback_query
+            <span class="apidocSignatureSpan">(update, props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.updates.chosen_inline_result">
+            function <span class="apidocSignatureSpan">telebot.updates.</span>chosen_inline_result
+            <span class="apidocSignatureSpan">(update, props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.updates.edited_message">
+            function <span class="apidocSignatureSpan">telebot.updates.</span>edited_message
+            <span class="apidocSignatureSpan">(update, props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.updates.inline_query">
+            function <span class="apidocSignatureSpan">telebot.updates.</span>inline_query
+            <span class="apidocSignatureSpan">(update, props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.telebot.updates.message">
+            function <span class="apidocSignatureSpan">telebot.updates.</span>message
+            <span class="apidocSignatureSpan">(update, props)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telebot" id="apidoc.module.telebot">module telebot</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.telebot" id="apidoc.element.telebot.telebot">
+        function <span class="apidocSignatureSpan"></span>telebot
+        <span class="apidocSignatureSpan">(cfg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class TeleBot {
+
+  constructor(cfg) {
+
+    if (typeof cfg != &#x27;object&#x27;) cfg = { token: cfg };
+
+    if (!cfg.token || cfg.token.split(&#x27;:&#x27;).length != 2) {
+      throw Error(&#x27;[bot.error] invalid bot token&#x27;);
+    }
+
+    this.cfg = cfg;
+    this.token = cfg.token;
+    this.id = this.token.split(&#x27;:&#x27;)[0];
+    this.api = `https://api.telegram.org/bot${ this.token }`;
+    this.fileLink = `https://api.telegram.org/file/bot${ this.token }/`;
+
+    let poll = cfg.polling;
+
+    // Migration
+    if (!poll) {
+      if (cfg.pooling) {
+        poll = cfg.pooling;
+        console.warn(&#x27;[bot.warning] use &#x22;polling&#x22; option instead of &#x22;pooling&#x22;!&#x27;);
+      } else {
+        poll = {};
+        // Set cfg.polling
+        for (let name of [&#x27;limit&#x27;, &#x27;timeout&#x27;, &#x27;retryTimeout&#x27;]) {
+          poll[name] = cfg[name];
+        }
+        // cfg.sleep renamed to cfg.polling.interval
+        poll.interval = cfg.sleep;
+      }
+    }
+
+    this.limit = poll.limit &#x3e; 0 &#x26;&#x26; poll.limit &#x3c;= 100 ? poll.limit : 100;
+    this.interval = poll.interval &#x3e;= 0 ? poll.interval : 1000;
+    this.timeout = poll.timeout &#x3e;= 0 ? poll.timeout : 0;
+    this.retryTimeout = poll.retryTimeout &#x3e;= 0 ? poll.retryTimeout : 5000;
+
+    this.webhook = cfg.webhook;
+
+    this.updateId = 0;
+    this.loopFn = null;
+
+    this.flags = {
+      poll: false,
+      retry: false,
+      looping: false
+    };
+
+    this.modList = {};
+    this.eventList = {};
+
+    this.updateTypes = standardUpdates;
+
+    this.processUpdate = (update, props) =&#x3e; {
+      for (let name in this.updateTypes) {
+        if (name in update) {
+          update = update[name];
+          return this.updateTypes[name].call(this, update, props);
+        }
+      }
+    };
+
+  }
+
+<span class="apidocCodeCommentSpan">  /* Modules */
+</span>
+  use(fn) {
+    return fn.call(this, this, this.cfg.modules);
+  }
+
+  /* Connection */
+
+  connect() {
+
+    const f = this.flags;
+
+    // Set webhook
+    if (this.webhook) {
+      let { url, cert } = this.webhook;
+      if (url) url = `${ url }/${ this.token }`;
+      return this.setWebhook(url, cert).then(x =&#x3e; {
+        console.log(`[bot.webhook] set to &#x22;${url}&#x22;`);
+        return webhook.call(this, this, this.webhook);
+      }).catch(error =&#x3e; {
+        console.error(&#x27;[bot.error.webhook]&#x27;, error);
+        this.event(&#x27;error&#x27;, { error });
+        return;
+      });
+
+    }
+
+    // Delete webhook
+    this.setWebhook().then(data =&#x3e; {
+      f.poll = true;
+      if (data.description == &#x27;Webhook was deleted&#x27;)
+        console.log(&#x27;[bot.webhook] webhook was deleted&#x27;);
+      console.log(&#x27;[bot.info] bot started&#x27;);
+    }).catch(error =&#x3e; {
+      console.error(&#x27;[bot.error.webhook]&#x27;, error);
+      this.event(&#x27;error&#x27;, { error });
+      return;
+    });
+
+    f.looping = true;
+
+    this.event(&#x27;connect&#x27;);
+
+    // Global loop function
+    this.loopFn = setInterval(x =&#x3e; {
+
+      // Stop on false looping flag
+      if (!f.looping) clearInterval(this.loopFn);
+
+      // Skip processing on false poll flag
+      if (!f.poll) return;
+
+      f.poll = false;
+
+      // Get updates
+      this.getUpdates().then(x =&#x3e; {
+
+        // Retry connecting
+        if (f.retry) {
+
+          const now = Date.now();
+          const diff = (now - f.retry) / 1000;
+
+          console.log(`[bot.info.update] reconnected after ${ diff } seconds`);
+          this.event(&#x27;reconnected&#x27;, {
+            startTime: f.retry, endTime: now, diffTime: diff
+          });
+
+          f.retry = false;
+
+        }
+
+        // Tick
+        return this.event(&#x27;tick&#x27;);
+
+      }).then(x =&#x3e; {
+
+        // Seems okay for the next poll
+        f.poll = true;
+
+      }).catch(error =&#x3e; {
+
+        // Set retry flag as current date (for timeout calculations)
+        if (f.retry === false) f.retry = Date.now();
+
+        console.error(`[bot.error.update]`, error.stack || error);
+        this.event([&#x27;error&#x27;, &#x27;error.update&#x27;], { error });
+
+        return Promise.reject();
+
+      }).catch(x =&#x3e; {
+
+        const seconds = this.retryTimeout / 1000;
+        console.log(`[bot.info.update] reconnecting in ${ seconds } seconds...`);
+        this.event(&#x27;reconnecting&#x27;);
+
+        // Set reconnecting timeout
+        setTimeout(x =&#x3e; (f.poll = true), this ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telebot.methods" id="apidoc.module.telebot.methods">module telebot.methods</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.answerList" id="apidoc.element.telebot.methods.answerList">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>answerList
+        <span class="apidocSignatureSpan">(id, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">answerList(id, opt) {
+  return new AnswerList(id, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.button" id="apidoc.element.telebot.methods.button">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>button
+        <span class="apidocSignatureSpan">(type, text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">button(type, text) {
+  if (!text &#x26;&#x26; type) return { text: type };
+  type = `request_${type}`;
+  return { text, [type]: true };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.inlineButton" id="apidoc.element.telebot.methods.inlineButton">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>inlineButton
+        <span class="apidocSignatureSpan">(text, opt={})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inlineButton(text, opt={}) {
+  const markup = { text };
+  if (opt.url) markup.url = opt.url;
+  if (opt.inline || opt.inline === &#x27;&#x27;) markup.switch_inline_query = opt.inline;
+  if (opt.callback) markup.callback_data = String(opt.callback);
+  return markup;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.inlineKeyboard" id="apidoc.element.telebot.methods.inlineKeyboard">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>inlineKeyboard
+        <span class="apidocSignatureSpan">(inline_keyboard)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inlineKeyboard(inline_keyboard) {
+  return JSON.stringify({ inline_keyboard });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.inlineQueryKeyboard" id="apidoc.element.telebot.methods.inlineQueryKeyboard">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>inlineQueryKeyboard
+        <span class="apidocSignatureSpan">(inline_keyboard)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inlineQueryKeyboard(inline_keyboard) {
+  return {inline_keyboard: inline_keyboard};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.keyboard" id="apidoc.element.telebot.methods.keyboard">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>keyboard
+        <span class="apidocSignatureSpan">(keyboard, opt={})</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keyboard(keyboard, opt={}) {
+  const markup = { keyboard };
+  if (opt.resize === true) markup[&#x27;resize_keyboard&#x27;] = true;
+  if (opt.once === true) markup[&#x27;one_time_keyboard&#x27;] = true;
+  if (opt.selective) markup[&#x27;selective&#x27;] = opt.selective;
+  return JSON.stringify(markup);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.sendAudio" id="apidoc.element.telebot.methods.sendAudio">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>sendAudio
+        <span class="apidocSignatureSpan">(id, audio, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendAudio(id, audio, opt) {
+  return sendFile.call(this, &#x27;audio&#x27;, id, audio, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.sendDocument" id="apidoc.element.telebot.methods.sendDocument">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>sendDocument
+        <span class="apidocSignatureSpan">(id, doc, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendDocument(id, doc, opt) {
+  return sendFile.call(this, &#x27;document&#x27;, id, doc, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.sendPhoto" id="apidoc.element.telebot.methods.sendPhoto">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>sendPhoto
+        <span class="apidocSignatureSpan">(id, photo, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendPhoto(id, photo, opt) {
+  return sendFile.call(this, &#x27;photo&#x27;, id, photo, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.sendSticker" id="apidoc.element.telebot.methods.sendSticker">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>sendSticker
+        <span class="apidocSignatureSpan">(id, sticker, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendSticker(id, sticker, opt) {
+  return sendFile.call(this, &#x27;sticker&#x27;, id, sticker, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.sendVideo" id="apidoc.element.telebot.methods.sendVideo">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>sendVideo
+        <span class="apidocSignatureSpan">(id, video, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendVideo(id, video, opt) {
+  return sendFile.call(this, &#x27;video&#x27;, id, video, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.sendVoice" id="apidoc.element.telebot.methods.sendVoice">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>sendVoice
+        <span class="apidocSignatureSpan">(id, voice, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sendVoice(id, voice, opt) {
+  return sendFile.call(this, &#x27;voice&#x27;, id, voice, opt);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.methods.setWebhook" id="apidoc.element.telebot.methods.setWebhook">
+        function <span class="apidocSignatureSpan">telebot.methods.</span>setWebhook
+        <span class="apidocSignatureSpan">(url, certificate)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setWebhook(url, certificate) {
+  if (certificate) {
+    const form = {
+      url,
+      certificate: {
+        value: fs.readFileSync(certificate),
+        options: { filename: &#x27;cert.pem&#x27; }
+      }
+    };
+    return this.request(&#x27;/setWebhook&#x27;, null, form);
+  }
+  return this.request(&#x27;/setWebhook&#x27;, { url });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.telebot.updates" id="apidoc.module.telebot.updates">module telebot.updates</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.updates.callback_query" id="apidoc.element.telebot.updates.callback_query">
+        function <span class="apidocSignatureSpan">telebot.updates.</span>callback_query
+        <span class="apidocSignatureSpan">(update, props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">callback_query(update, props) {
+  props.type = &#x27;callbackQuery&#x27;;
+  return this.event(&#x27;callbackQuery&#x27;, update, props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.updates.chosen_inline_result" id="apidoc.element.telebot.updates.chosen_inline_result">
+        function <span class="apidocSignatureSpan">telebot.updates.</span>chosen_inline_result
+        <span class="apidocSignatureSpan">(update, props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">chosen_inline_result(update, props) {
+  props.type = &#x27;inlineChoice&#x27;;
+  return this.event(&#x27;inlineChoice&#x27;, update, props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.updates.edited_message" id="apidoc.element.telebot.updates.edited_message">
+        function <span class="apidocSignatureSpan">telebot.updates.</span>edited_message
+        <span class="apidocSignatureSpan">(update, props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">edited_message(update, props) {
+  return updateFunctions.message.call(this, update, props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.updates.inline_query" id="apidoc.element.telebot.updates.inline_query">
+        function <span class="apidocSignatureSpan">telebot.updates.</span>inline_query
+        <span class="apidocSignatureSpan">(update, props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inline_query(update, props) {
+  props.type = &#x27;inlineQuery&#x27;;
+  return this.event(&#x27;inlineQuery&#x27;, update, props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.telebot.updates.message" id="apidoc.element.telebot.updates.message">
+        function <span class="apidocSignatureSpan">telebot.updates.</span>message
+        <span class="apidocSignatureSpan">(update, props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">message(update, props) {
+
+  // Set promise
+  let promise = Promise.resolve();
+
+  // Run global message mod
+  let mod = this.modRun(&#x27;message&#x27;, { msg: update, props });
+
+  update = mod.msg;
+  props = mod.props;
+
+  for (let type of MESSAGE_TYPES) {
+
+    // Check for Telegram API documented types
+    if (!(type in update)) continue;
+
+    // Shortcut
+    if (SHORTCUTS[type]) type = SHORTCUTS[type];
+
+    // Set message type
+    props.type = type;
+
+    // Run message type mod
+    mod = this.modRun(type, { msg: update, props });
+
+    update = mod.msg;
+    props = mod.props;
+
+    // Send type event
+    promise = this.event([&#x27;*&#x27;, type], update, props);
+
+    // Check for command
+    if (type == &#x27;text&#x27;) {
+
+      const match = reCMD.exec(update.text);
+      if (!match) continue;
+
+      // Command found
+      props.type = &#x27;command&#x27;;
+      promise = promise.then(x =&#x3e; {
+        return this.event([&#x27;/*&#x27;, &#x27;/&#x27; + match[1]], update, props);
+      });
+
+    }
+
+    return promise;
+
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
